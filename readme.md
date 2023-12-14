@@ -1,7 +1,7 @@
 # Jac Enterprises
 ### Objective
 Create a single page application (SPA) that creates a product that meets the requirements relayed by Jac Enterprises
-
+sneaky
 ### Skills Required
 - HTML
 - JavaScript
