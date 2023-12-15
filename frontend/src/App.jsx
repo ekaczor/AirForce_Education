@@ -1,4 +1,4 @@
-import { Route, Routes, Router } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
@@ -6,22 +6,16 @@ import ContactPage from "./pages/ContactPage";
 
 const App = () => {
   return (
-    <div>
-      <Router>
-        <Navbar />
+    // <Router>
+<div>
+    <Navbar />      
         <Routes>
-          <Route path="/">
-            <HomePage />
-          </Route>
-          <Route path="/about">
-            <AboutPage />
-          </Route>
-          <Route path="/contact">
-            <ContactPage />
-          </Route>
-        </Routes>
-      </Router>
-    </div>
+          <Route path="/HomePage" element={ <HomePage />}/>
+          <Route path="/AboutPage" element={<AboutPage />}/>
+          <Route path="/ContactPage" element= {<ContactPage />}/>
+      </Routes>
+     </div>
+      // </Router>
   );
 };
 
