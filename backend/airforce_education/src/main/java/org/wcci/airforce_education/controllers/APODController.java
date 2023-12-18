@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.wcci.airforce_education.services.APODService;
 
+import reactor.core.publisher.Mono;
+
 @RestController
 @RequestMapping("/api/apod")
 public class APODController {
@@ -14,7 +16,12 @@ public class APODController {
     private APODService service;
 
     @GetMapping("/{date}")
-    public String getImageOfTheDay(@PathVariable String date) {
-        return service.fetchData(date);
+    public Mono<String> getImageOfTheDay(@PathVariable String date) {
+        try {
+            return service.fetchData(date, 0);
+        } catch (Exception e) {
+            return null;
+        }
+
     }
 }
