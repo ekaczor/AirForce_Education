@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+import Apod from "./pages/Apod";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Route path="/HomePage" element={<HomePage />} />
         <Route path="/AboutPage" element={<AboutPage />} />
         <Route path="/ContactPage" element={<ContactPage />} />
+        <Route path="/apod" element={<Apod />}></Route>
       </Routes>
     </Router>
   );
