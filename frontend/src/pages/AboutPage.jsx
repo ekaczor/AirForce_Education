@@ -1,5 +1,9 @@
+import About from "../components/About.jsx";
 const AboutPage = () => {
-  return <div><h1>About Page</h1></div>;
+
+  return (
+    <About/>
+  )
 };
 
 export default AboutPage;
