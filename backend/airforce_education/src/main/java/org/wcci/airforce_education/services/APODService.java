@@ -13,7 +13,11 @@ public class APODService {
     @Autowired
     private ApiConfig apiConfig;
 
-    public void fetchData(String date) {
+    public APODService(ApiConfig apiConfig) {
+        this.apiConfig = apiConfig;
+    }
+
+    public String fetchData(String date) {
         WebClient webClient = WebClient.create();
 
         String responseBody = webClient.get()
@@ -21,7 +25,6 @@ public class APODService {
                 .retrieve()
                 .bodyToMono(String.class)
                 .block();
-                System.out.println(responseBody);
+        return responseBody;
     }
-
 }
