@@ -1,3 +1,7 @@
 {
-  "cSpell.words": ["Kazcor", "Lomner"]
+  "cSpell.words": [
+    "Kazcor",
+    "Lomner"
+  ],
+  "java.compile.nullAnalysis.mode": "automatic"
 }
