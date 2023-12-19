@@ -27,7 +27,7 @@ const About = () => {
         <div className="profileCard" id="EK">
         <img src="" alt="" className="profilePhoto"/>
         <div className="socials"><div><img src={image1 }alt="" /></div><div><img src={image2} alt="" /></div></div>
-          <p>Evan Kazcor</p>
+          <p>Evan Kaczor</p>
         </div>
         <div className="profileCard" id="FA">
           <img src="" alt="" className="profilePhoto"/>
