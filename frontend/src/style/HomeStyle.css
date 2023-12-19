@@ -1,0 +1,65 @@
+.Home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.all-links {
+}
+
+.tool-link {
+  border: solid 1px;
+  border-color: #1565c0;
+  background-color: #1565c0;
+  border-radius: 10px;
+  width: 600px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px black;
+  margin-bottom: 100px;
+}
+
+.POTD-image {
+  width: 600px;
+  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.Header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 50px;
+}
+
+.paragraph {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 800px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.Picture-desc {
+  text-decoration: none !important;
+  color: white !important;
+  align-items: center;
+  text-align: center;
+}
+
+.Card-title {
+  text-decoration: none;
+  color: white;
+  align-items: center;
+  text-align: center;
+}
+
+.Link-body {
+  text-decoration: none;
+  line-height: 1.5x;
+}

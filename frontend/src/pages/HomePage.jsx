@@ -1,9 +1,40 @@
 import { Link } from "react-router-dom";
 
+/* eslint-disable react/no-unescaped-entities */
+import "../style/HomeStyle.css";
+import ToolCard from "../components/ToolCard";
+
 const HomePage = () => {
   return (
-    <div>
-      <Link to="/apod">Home Page</Link>
+    <div className="Home-container">
+      <div>
+        <h1 className="Header">AirForce Education</h1>
+        <p className="paragraph">
+          Explore AirForce Education – a platform crafted to ignite curiosity
+          and learning. Click on our daily 'Picture of the Day' for exciting
+          adventures, sparking imagination and exploration. We're dedicated to
+          creating an engaging learning journey for young minds. <br />
+          <br />
+        </p>
+      </div>
+
+      <div className="all-links">
+        <ToolCard
+          title="See today's NASA Picture of the Day!"
+          description="The Picture of the Day tool in AirForce Education delivers daily
+                curated images, captivating learners with visually engaging
+                content that sparks curiosity and encourages exploration."
+          imagePath="src/assets/PictureOTD.png"
+          pagePath="/apod"
+        />
+
+        <ToolCard
+          title="title"
+          description="description"
+          imagePath="src/assets/PictureOTD.png"
+          pagePath="/apod"
+        />
+      </div>
     </div>
   );
 };
