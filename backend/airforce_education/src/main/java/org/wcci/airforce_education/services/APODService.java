@@ -1,17 +1,23 @@
 package org.wcci.airforce_education.services;
 
 import org.springframework.web.reactive.function.client.WebClient;
+import org.wcci.airforce_education.dtos.APODImageEntity;
+import org.wcci.airforce_education.repositories.ImageRepository;
 
 import reactor.core.publisher.Mono;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class APODService {
     private final WebClient webClient;
+
+    @Autowired
+    private ImageRepository imageRepository;
 
     private String baseUrl = "https://api.nasa.gov/planetary";
 
@@ -37,6 +43,14 @@ public class APODService {
                 throw (new Exception(error));
             }
         }
+    }
+
+    public Mono<String> saveImage(String imageUrl) {
+        APODImageEntity imageEntity = new APODImageEntity();
+        imageEntity.setImageUrl(imageUrl);
+
+        return Mono.fromSupplier(() -> imageRepository.save(imageEntity))
+                .map(savedImage -> "Image saved successfully with ID: " + savedImage.getId());
     }
 
     public APODService(WebClient.Builder webClientBuilder) {
