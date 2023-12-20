@@ -12,14 +12,8 @@ function Navbar() {
   };
 
   return (
-    <header>
-      <h3>
-        <img
-          src="src/assets/Airplane.png"
-          alt="Company logo"
-          className="logo"
-        />
-      </h3>
+    <header style={{ zIndex: "1" }}>
+      <img src="src/assets/Airplane.png" alt="logo" className="logo" />
       <nav ref={navRef}>
         <Link to="/HomePage">Home Page</Link>
         <Link to="/ContactPage">Contact us</Link>

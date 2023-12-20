@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ImageListPage from "./ImageListPage";
+import "../style/ApodStyle.css";
 
 const Apod = () => {
   let [data, setData] = useState(null);
@@ -84,14 +85,13 @@ const [imageData, setImageData] =useState([]);
       {loading && <h1>Loading ...</h1>}
       {!loading && (
         <div>
-        
           <h1>{data.title}</h1>
           <h1>{data.date}</h1>
+          </div>
+          <div className="image">
           <img src={data?.hdurl ? data.url : data.hdurl} alt={data.title} />
           <p>{data.explanation}</p>
           <button onClick={saveImage}>Save Image</button>
-          <button onClick={getAllImages}>See saved images</button>
-      
         </div>
       )}
     </div>

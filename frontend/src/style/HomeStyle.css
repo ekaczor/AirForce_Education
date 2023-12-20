@@ -4,8 +4,6 @@
   align-items: center;
 }
 
-.all-links {
-}
 
 .tool-link {
   border: solid 1px;
@@ -13,6 +11,7 @@
   background-color: #1565c0;
   border-radius: 10px;
   width: 600px;
+  max-width: 80vw;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -23,6 +22,7 @@
 
 .POTD-image {
   width: 600px;
+  max-width: 70vw;
   padding: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -39,7 +39,7 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  width: 800px;
+  /* width: 800px; */
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 20px;

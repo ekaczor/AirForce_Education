@@ -10,8 +10,9 @@ import ImageListPage from "./pages/ImageListPage";
 const App = () => {
   return (
     <Router>
-      <Navbar />
+      <Navbar  />
       <Routes>
+        <Route path="/" element={<HomePage />} />
         <Route path="/HomePage" element={<HomePage />} />
         <Route path="/AboutPage" element={<AboutPage />} />
         <Route path="/ContactPage" element={<ContactPage />} />

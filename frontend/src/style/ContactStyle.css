@@ -1,39 +1,41 @@
 .contactform {
-  margin-left: 30vh;
-  margin-top: 10vh;
-  width: 75vh;
-  height: 70vh;
-  padding-left: 50px;
-  padding-top: 25px;
+  margin-left: 20%;
+  margin-top: 5%;
+  width: 75vw;
+  margin: 1rem;
+  padding: 1rem;
   outline: solid;
   border-radius: 5%;
-
   background-color: #1565c0;
   color: #fff;
+}
+
+h1 {
+  font-size: 1.5rem;
 }
 
 input {
   margin: 2vh;
 }
+
 .comment-input {
-  
-  font-size: 1.5rem;
-  width: 550px;
-  height: 250px;
-  padding: 10px; 
+  max-width: 80%;
+  padding: 10px;
   vertical-align: top;
-  resize: none; 
+  resize: none;
   text-align: left;
 
-  
+
 }
+
 .inputText {
   width: 350px;
+  max-width: 60vw;
   height: 2rem;
   font-size: 1.5rem;
 
 }
 
-label{
+label {
   font-size: 1.5rem;
 }
