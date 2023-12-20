@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "../style/ApodStyle.css";
 
 const Apod = () => {
   let [data, setData] = useState(null);
@@ -57,11 +58,24 @@ const Apod = () => {
       {loading && <h1>Loading ...</h1>}
       {!loading && (
         <div>
-          <h1>{data.title}</h1>
+        <div className="title">
+          <h1 >{data.title}</h1>
           <h1>{data.date}</h1>
+          </div>
+          <div className="image">
           <img src={data?.hdurl ? data.url : data.hdurl} alt={data.title} />
-          <p>{data.explanation}</p>
-          <button onClick={saveImage}>Save Image</button>
+          </div>
+          <div className="save-button">
+          <button onClick={saveImage} className="button">
+          <div>
+          <img src="src/assets/Star.png" alt="Star Image Save Button" /> 
+          </div>
+          Save Image
+          </button>
+          </div>
+          
+          <p className="explanation">{data.explanation}</p>
+          
         </div>
       )}
     </div>
