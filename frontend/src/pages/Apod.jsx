@@ -57,7 +57,7 @@ const Apod = () => {
   return (
     <div>
     <div className="Spinner">
-      {loading && <h1><LoadingSpinner/></h1>}</div>
+      {loading && <LoadingSpinner/>}</div>
       {!loading && (
         <div>
         <div className="title">
