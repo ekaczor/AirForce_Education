@@ -15,7 +15,7 @@ function Navbar() {
 	};
 
 	return (
-		<header>
+		<header style={{zIndex:'1'}}>
 			<h3>LOGO</h3>
 			<nav ref={navRef}>
 				<Link to="/HomePage">Home Page</Link>
