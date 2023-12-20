@@ -19,46 +19,172 @@
   display: flex;
   justify-content: center;
 }
-
+.comment-bio {
+  outline: solid;
+  width: 46%;
+  height: 70%;
+  position: absolute;
+  left: 52%;
+  bottom: 20%;
+  font-size: 1;
+  text-align: justify;
+}
 .bios .profileCard {
   height: 50vh;
   width: 90vh;
   border-radius: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
   background-color: #67a1e4;
   box-shadow: 0px 1px 0px #1a7beb;
   position: relative;
 }
-.profileCard p {
-  outline: solid;
+.profileCard .nametag {
   font-size: 2.5rem;
   position: absolute;
-  bottom: 10px;
+  bottom: 5%;
   left: 10%;
   transform: translateX(-10%);
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .profileCard .profilePhoto {
-  outline: solid;
-  width: 200px;
+  width: 30vh;
   position: absolute;
-  height: 250px;
+  height: 35vh;
   left: 7%;
 
-  top: 35px;
+  top: 9%;
 }
 
 .profileCard .socials {
-    outline: solid;
+  width: 150px;
+  position: absolute;
+  height: 50px;
+  left: 65%;
+  bottom: 5%;
+  display: flex;
+}
+
+.profileCard .socials img {
+  width: 50px;
+  height: 50px;
+}
+
+/* @media only screen and (min-width: 801px) and(max-width: 1024px) {
+
+  .bios .profileCard {
+    height: 50vh;
+    width: 90%;
+    border-radius: 5%;
+    margin-left: 5%;
+    box-shadow: 0px 1px 0px #1a7beb;
+    position: relative;
+    margin-top: 20px;
+    background-color: cadetblue;
+  }
+
+  .profileCard .nametag {
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    transform: translateX(-10%);
+    color: rgb(0, 0, 0);
+  }
+
+  .profileCard .socials {
     width: 150px;
     position: absolute;
     height: 50px;
     left: 65%;
     bottom: 50px;
     display: flex;
-}
-.profileCard .socials img{
-  width: 50px;
-  height: 50px;
+  }
 
+  .section1 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .section2 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .section3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .comment-bio {
+    display: none;
+  }
+}
+
+/* Phone views */
+ @media only screen and  (max-width: 800px){
+
+  .bios .profileCard {
+   
+    height: 50vh;
+    width: 90%;
+    border-radius: 5%;
+    margin-left: 5%;
+    box-shadow: 0px 1px 0px #1a7beb;
+    position: relative;
+    margin-top: 20px;
+    background-color: rgb(14, 158, 163);
+  }
+  .profileCard .profilePhoto{ 
+    position: absolute;
+    width: 70%;
+    height: 70%;
+  
+  }
+
+  .profileCard .nametag {
+    font-size: 2.8rem;
+    position: absolute;
+    bottom: 5%;
+    left: 15%;
+    transform: translateX(-10%);
+    width: 90%;
+    color: rgb(0, 0, 0);
+    
+  }
+  .profileCard .socials {
+    
+    width: 18%;
+    height: 35%;
+    position: absolute;
+    left: 82%;
+    bottom: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .section1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .section2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .section3 {
+    display: flex;
+    flex-direction: column;
+  }
+  .comment-bio {
+    display: none;
+  }
+
+  .profileCard .socials img {
+    width: 75%;
+    height: 100%; 
+    
+  }
+}
+
+@media only scree and () {
   
 }

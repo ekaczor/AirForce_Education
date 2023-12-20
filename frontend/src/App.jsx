@@ -8,7 +8,7 @@ import Apod from "./pages/Apod";
 const App = () => {
   return (
     <Router>
-      <Navbar />
+      <Navbar  />
       <Routes>
         <Route path="/HomePage" element={<HomePage />} />
         <Route path="/" element={<HomePage />} />
