@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Fact from "./Fact";
 import ButtonNewFact from "./ButtonNewFact";
 import "../style/RandomFactStyle.css";
+import LoadingSpinner from "./LoadingSpinner";
 
 const RandomFact = () => {
   let [fact, setFact] = useState(null);
@@ -36,7 +37,7 @@ const RandomFact = () => {
           }}
         />
       )}
-      {!loaded && <div>loading... </div>}
+      {!loaded && <LoadingSpinner/>}
     </div>
   );
 };
