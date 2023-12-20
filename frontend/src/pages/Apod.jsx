@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 
+
 const Apod = () => {
   let [data, setData] = useState(null);
   let [loading, setLoading] = useState(true);
+const [imageData, setImageData] =useState([]);
 
   const getTodayDate = () => {
     const today = new Date();
@@ -28,6 +30,29 @@ const Apod = () => {
     }
   };
 
+  const getAllImages = async () => {
+    try {
+      const response = await fetch('http://localhost:8080/api/apod/getall', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to load images');
+      }
+
+      const fetchedImageData = await response.json();
+      setImageData(fetchedImageData);
+
+    } catch (error) {
+      console.error('Error loading images:', error);
+      // Handle errors as needed
+    }
+  };
+
+
   const saveImage = async () => {
     try {
       const response = await fetch('http://localhost:8080/api/apod/saveImage', {
@@ -49,6 +74,8 @@ const Apod = () => {
     }
   };
 
+  
+
   useEffect(() => {
     getImage(getTodayDate());
   }, []);
@@ -57,11 +84,14 @@ const Apod = () => {
       {loading && <h1>Loading ...</h1>}
       {!loading && (
         <div>
+        
           <h1>{data.title}</h1>
           <h1>{data.date}</h1>
           <img src={data?.hdurl ? data.url : data.hdurl} alt={data.title} />
           <p>{data.explanation}</p>
           <button onClick={saveImage}>Save Image</button>
+          <button onClick={getAllImages}>See saved images</button>
+      
         </div>
       )}
     </div>
