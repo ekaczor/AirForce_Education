@@ -1,18 +1,15 @@
-import React from "react";
 import { useRef } from "react";
-import {FaBars, FaTimes} from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../style/NavStyle.css";
 
 // Navbar component responsible for rendering the navigation bar.
 function Navbar() {
-	const navRef = useRef();
+  const navRef = useRef();
 
-	const showNavbar = () => {
-		navRef.current.classList.toggle(
-			"responsive_nav"
-		);
-	};
+  const showNavbar = () => {
+    navRef.current.classList.toggle("responsive_nav");
+  };
 
 	return (
 		<header style={{zIndex:'1'}}>

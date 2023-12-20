@@ -27,6 +27,28 @@ const Apod = () => {
       console.error(error);
     }
   };
+
+  const saveImage = async () => {
+    try {
+      const response = await fetch('http://localhost:8080/api/apod/saveImage', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ imageUrl: data.hdurl }), 
+      });
+  
+      if (!response.ok) {
+        throw new Error('Failed to save image');
+      }
+  
+      console.log('Image saved successfully');
+      // Handle success as needed
+    } catch (error) {
+      console.error('Error saving image:', error);
+    }
+  };
+
   useEffect(() => {
     getImage(getTodayDate());
   }, []);
@@ -39,6 +61,7 @@ const Apod = () => {
           <h1>{data.date}</h1>
           <img src={data?.hdurl ? data.url : data.hdurl} alt={data.title} />
           <p>{data.explanation}</p>
+          <button onClick={saveImage}>Save Image</button>
         </div>
       )}
     </div>

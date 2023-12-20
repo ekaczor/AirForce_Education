@@ -11,6 +11,7 @@ const App = () => {
       <Navbar  />
       <Routes>
         <Route path="/HomePage" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/AboutPage" element={<AboutPage />} />
         <Route path="/ContactPage" element={<ContactPage />} />
         <Route path="/apod" element={<Apod />}></Route>

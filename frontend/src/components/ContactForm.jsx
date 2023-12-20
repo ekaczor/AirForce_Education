@@ -1,4 +1,3 @@
-import React from "react";
 import "../style/ContactStyle.css";
 const ContactForm = () => {
   return (

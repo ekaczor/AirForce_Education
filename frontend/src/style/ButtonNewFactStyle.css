@@ -1,0 +1,8 @@
+.new-fact-btn {
+    color: white;
+    background-color: rgb(228, 74, 99);
+    padding: 1rem;
+    width: 10vw;
+    min-width: fit-content;
+    border-radius: 25px;
+}
