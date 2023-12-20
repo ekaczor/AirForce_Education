@@ -10,7 +10,7 @@ const HomePage = () => {
       <div>
         <h1 className="Header">AirForce Education</h1>
         <p className="paragraph">
-          Explore AirForce Education – a platform crafted to ignite curiosity
+          Explore AirForce Education - a platform crafted to ignite curiosity
           and learning. Click on our daily 'Picture of the Day' for exciting
           adventures, sparking imagination and exploration. We're dedicated to
           creating an engaging learning journey for young minds. <br />
