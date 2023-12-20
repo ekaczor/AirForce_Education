@@ -1,10 +1,10 @@
 .contactform {
-  margin-left: 30vh;
-  margin-top: 10vh;
+  margin-left: 20%;
+  margin-top: 5%;
   width: 75vh;
   height: 70vh;
-  padding-left: 50px;
-  padding-top: 25px;
+  padding-left: 3%;
+  padding-top: 2%;
   outline: solid;
   border-radius: 5%;
 
@@ -18,8 +18,8 @@ input {
 .comment-input {
   
   font-size: 1.5rem;
-  width: 550px;
-  height: 250px;
+  width: 60vh;
+  height: 25vh;
   padding: 10px; 
   vertical-align: top;
   resize: none; 

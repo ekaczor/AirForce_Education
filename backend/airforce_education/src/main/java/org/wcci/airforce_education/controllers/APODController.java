@@ -28,7 +28,7 @@ public class APODController {
 
     }
 
-        @PostMapping("/saveImage")
+    @PostMapping("/saveImage")
     public Mono<ResponseEntity<String>> saveImageOfTheDay(@RequestBody String imageUrl) {
         try {
             // Assume that the imageUrl is passed as the request body
