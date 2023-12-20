@@ -67,7 +67,7 @@ nav {
 
   header nav {
     position: fixed;
-    top: -100vh;
+    top: -100%;
     left: 0;
     height: 100%;
     width: 100%;
@@ -83,7 +83,7 @@ nav {
 
   header nav {
     position: fixed;
-    top: -100vh;
+    top: -100%;
     left: 0;
     height: 100%;
     width: 100%;
@@ -98,7 +98,7 @@ nav {
   }
 
   header .responsive_nav {
-    transform: translateY(100vh);
+    transform: translateY(100%);
   }
 
   nav .nav-close-btn {
