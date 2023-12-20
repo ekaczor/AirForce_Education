@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import Apod from "./pages/Apod";
+import ImageListPage from "./pages/ImageListPage";
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/AboutPage" element={<AboutPage />} />
         <Route path="/ContactPage" element={<ContactPage />} />
         <Route path="/apod" element={<Apod />}></Route>
+        <Route path="/image-list" component={ImageListPage} />
       </Routes>
     </Router>
   );

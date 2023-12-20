@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import ImageListPage from "./ImageListPage";
 
 const Apod = () => {
   let [data, setData] = useState(null);
@@ -60,7 +60,7 @@ const [imageData, setImageData] =useState([]);
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ imageUrl: data.hdurl }), 
+        body: JSON.stringify( data.hdurl ), 
       });
   
       if (!response.ok) {

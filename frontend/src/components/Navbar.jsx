@@ -24,7 +24,6 @@ function Navbar() {
         <Link to="/HomePage">Home Page</Link>
         <Link to="/ContactPage">Contact us</Link>
         <Link to="/AboutPage">About us</Link>
-        <Link to="/SavedImages">Saved Images</Link>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
         </button>

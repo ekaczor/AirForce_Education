@@ -4,8 +4,9 @@ import org.springframework.web.reactive.function.client.WebClient;
 import org.wcci.airforce_education.dtos.APODImageEntity;
 import org.wcci.airforce_education.repositories.ImageRepository;
 
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
+import java.util.stream.Collectors;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +29,7 @@ public class APODService {
     public Mono<String> fetchData(String date, int index) throws Exception {
         try {
 
-            var responseBody = webClient.get()
+            var responseBody= webClient.get()
                     .uri(uriBuilder -> uriBuilder
                             .path("/apod")
                             .queryParam("api_key", keys.get(index))
@@ -51,6 +52,16 @@ public class APODService {
 
         return Mono.fromSupplier(() -> imageRepository.save(imageEntity))
                 .map(savedImage -> "Image saved successfully with ID: " + savedImage.getId());
+    }
+
+    public List<String> getAllImages() {
+        // Retrieve a list of APODImageEntity from the repository
+        List<APODImageEntity> images = imageRepository.findAll();
+    
+        // Use Java Streams to transform the list of entities to a list of image URLs
+        return images.stream()
+                .map(APODImageEntity::getImageUrl) // Map each APODImageEntity to its imageUrl property
+                .collect(Collectors.toList()); // Collect the mapped URLs into a List<String>
     }
 
     public APODService(WebClient.Builder webClientBuilder) {
