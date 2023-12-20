@@ -15,9 +15,9 @@ function Navbar() {
     <header style={{ zIndex: "1" }}>
       <img src="src/assets/Airplane.png" alt="logo" className="logo" />
       <nav ref={navRef}>
-        <Link to="/HomePage">Home Page</Link>
-        <Link to="/ContactPage">Contact us</Link>
-        <Link to="/AboutPage">About us</Link>
+        <Link to="/HomePage" onClick={showNavbar}>Home Page</Link>
+        <Link to="/ContactPage" onClick={showNavbar}>Contact us</Link>
+        <Link to="/AboutPage" onClick={showNavbar}>About us</Link>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
         </button>
