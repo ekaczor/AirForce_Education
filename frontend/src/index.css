@@ -1,0 +1,17 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap%22"); */
+body {
+    position: relative;
+    /* font-family: ; */
+}
+
+body::before {
+    content: "";
+    background: url('../src/assets/Background.jpg') center/cover no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5; 
+}
