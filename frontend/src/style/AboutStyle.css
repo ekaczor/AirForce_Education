@@ -1,10 +1,11 @@
 .bios {
   position: relative;
   display: flex;
-  margin-top: 12%;
+  margin-top: 2%;
   height: fit-content;
   gap: 20px;
   flex-direction: column;
+  font-weight: 600;
 }
 .section1 {
   display: flex;
