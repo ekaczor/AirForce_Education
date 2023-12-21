@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import "../style/ApodStyle.css";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const Apod = () => {
   let [data, setData] = useState(null);
@@ -58,8 +59,8 @@ const Apod = () => {
   
   return (
     <div>
-    
-      {loading && <h1>Loading ...</h1>}
+    <div className="Spinner">
+      {loading && <LoadingSpinner/>}</div>
       {!loading && (
         <>
           <div>

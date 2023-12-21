@@ -12,7 +12,7 @@ function Navbar() {
   };
 
   return (
-    <header style={{ zIndex: "1" }}>
+    <header >
       <img src="src/assets/Airplane.png" alt="logo" className="logo" />
       <nav ref={navRef}>
         <Link to="/HomePage" onClick={showNavbar}>Home Page</Link>
