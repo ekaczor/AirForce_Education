@@ -85,23 +85,20 @@ const About = () => {
           <div className="comment-bio">
             <p>
               {" "}
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Molestias laboriosam unde in laborum? Consequuntur rem veniam
-              architecto vitae. Voluptatum, earum! Quas, perspiciatis corrupti?
-              Optio sit quaerat suscipit sint necessitatibus. Tempore.
+              Recent We Can Code IT grad (Jan/24) with skills from Production Coordinator—great at communication, teamwork, and time management. Ready to apply Full-Stack Java expertise in Columbus, Ohio, for a team valuing collaboration, communication, and top-notch customer support. Eager software engineer seeking the right opportunity.
             </p>
           </div>
           <div className="socials">
             <div>
               <a
-                href="https://github.com/ekaczor?tab=repositories"
+                href="https://github.com/ekaczor"
                 target="blank"
               >
                 <img src={githubLogo} alt="Evan's github" />
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="https://www.linkedin.com/in/evan-kaczor-777585293/">
                 <img src={linkedInLogo} alt="Evans LinkedIn" />
               </a>
             </div>

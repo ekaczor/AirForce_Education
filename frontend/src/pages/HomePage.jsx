@@ -31,7 +31,7 @@ const HomePage = () => {
 
       <div className="gallery">
         <ToolCard
-          title="See your saved images"
+          title="Saved Image Gallery"
           description="All of your favorites images saved in one place!"
           imagePath="../src/assets/GalleryImage.jpg"
           pagePath={"/saved-images"}

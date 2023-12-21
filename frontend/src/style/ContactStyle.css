@@ -1,14 +1,16 @@
 .contactform {
   position: absolute;
   left: 36%;
+  top: 175px;
   width: 30vw;
   height: fit-content;
   margin: 1rem;
   padding: 1rem;
   outline: solid;
-  border-radius: 5%;
+  border-radius: 30px;
   background-color: #1565c0;
   color: #fff;
+  margin: 0 auto;
 }
 
 h1 {
@@ -19,6 +21,7 @@ h1 {
 input {
   margin: 2vh;
 }
+
 .comment-input {
   width: 90%;
   height: 10em;
@@ -63,6 +66,12 @@ button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
+  background-color: #084285;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
   margin-right: 2vw;
   cursor: pointer;
   transition: background-color 0.3s, box-shadow 0.3s;
@@ -72,7 +81,10 @@ button {
 button:hover {
   background-color: #67b8ff;
   box-shadow: 0 0 10px white;
+  background-color: #67b8ff;
+  box-shadow: 0 0 10px white;
 }
+
 
 @media only screen and (max-width: 1200px) {
   .contactform {
@@ -92,3 +104,4 @@ button:hover {
     height: fit-content;
   }
 }
+
