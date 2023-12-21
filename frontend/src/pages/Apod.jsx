@@ -6,13 +6,23 @@ import LoadingSpinner from "../components/LoadingSpinner";
 const Apod = () => {
   let [data, setData] = useState(null);
   let [loading, setLoading] = useState(true);
+  let [currentDate, setCurrentDate] = useState(new Date());
 
-  const getTodayDate = () => {
+  const handleDateChange = (days) => {
+    const newDate = new Date(currentDate);
+    newDate.setDate(currentDate.getDate() + days);
+
     const today = new Date();
-    const formattedDate = `${today.getFullYear()}-${
-      today.getMonth() + 1
-    }-${today.getDate()}`;
-    return formattedDate;
+    if (newDate > today) {
+      // If it is, prevent updating the state and fetching data
+      return;
+    }
+    setCurrentDate(newDate);
+    setLoading(true);
+    getImage(getFormattedDate(newDate));
+  };
+  const getFormattedDate = (date) => {
+    return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
   };
 
   const getImage = async (date) => {
@@ -38,10 +48,12 @@ const Apod = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify( data?.hdurl ? data.url : data.hdurl ),
-        
+        body: JSON.stringify({
+          imageUrl: data?.hdurl ? data.url : data.hdurl,
+          title: data.title,
+        }),
       });
-      console.log(data?.hdurl ? data.url : data.hdurl)
+      console.log(data?.hdurl ? data.url : data.hdurl);
       if (!response.ok) {
         throw new Error("Failed to save image");
       }
@@ -54,14 +66,12 @@ const Apod = () => {
   };
 
   useEffect(() => {
-    getImage(getTodayDate());
+    getImage(getFormattedDate(new Date()));
   }, []);
-  
-  
+
   return (
     <div>
-    <div className="Spinner">
-      {loading && <LoadingSpinner/>}</div>
+      <div className="Spinner">{loading && <LoadingSpinner />}</div>
       {!loading && (
         <>
           <div>
@@ -75,6 +85,8 @@ const Apod = () => {
             ></img>
             <p>{data.explanation}</p>
             <button onClick={saveImage}>Save Image</button>
+            <button onClick={() => handleDateChange(-1)}>Previous Day</button>
+            <button onClick={() => handleDateChange(1)}>Next Day</button>
           </div>
         </>
       )}
