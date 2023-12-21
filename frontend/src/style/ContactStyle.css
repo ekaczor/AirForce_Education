@@ -1,7 +1,9 @@
 .contactform {
-  margin-left: 20%;
-  margin-top: 5%;
-  width: 75vw;
+  position: absolute;
+  left: 36%;
+  top: 18%;
+  width: 30vw;
+  height: fit-content;
   margin: 1rem;
   padding: 1rem;
   outline: solid;
@@ -11,6 +13,7 @@
 }
 
 h1 {
+  margin-left: 30%;
   font-size: 1.5rem;
 }
 
@@ -18,24 +21,72 @@ input {
   margin: 2vh;
 }
 
+
 .comment-input {
+ width: 90%;
+ height: 30vh;
   max-width: 80%;
-  padding: 10px;
+  
   vertical-align: top;
   resize: none;
   text-align: left;
+  font-size: 1.5rem;
 
 
 }
 
 .inputText {
-  width: 350px;
+  width: 20vw;
   max-width: 60vw;
-  height: 2rem;
-  font-size: 1.5rem;
+  height: 3.8vh;
+  font-size: 1.5em;
 
 }
 
 label {
   font-size: 1.5rem;
+   
+}
+form{
+
+  margin-left: 2%;
+}
+button {
+  background-color: #084285; 
+  color: #fff; 
+  font-size: 1.5rem; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 5px; 
+  margin-right: 2vw;
+  cursor: pointer; 
+  transition: background-color 0.3s, box-shadow 0.3s; 
+
+  box-shadow: 0 0 0 white;
+}
+
+button:hover {
+  background-color: #67b8ff;  
+  box-shadow: 0 0 10px white; 
+}
+@media only screen and (max-width: 800px) {
+  .contactform {
+    width: 80%; 
+    left: 10%; 
+    padding-bottom:10px ;
+    height: fit-content;
+  }
+  .inputText {
+    width: 70vw;
+  
+    height: 3.8vh;
+    font-size: 1.5em;
+  
+  }
+  button{
+  height: fit-content;
+
+
+  }
+
 }

@@ -1,14 +1,14 @@
 .bios {
   position: relative;
   display: flex;
-
-  margin-top: 15vh;
-  height: 50vh;
+  margin-top: 12%;
+  height: fit-content;
   gap: 20px;
   flex-direction: column;
 }
 .section1 {
   display: flex;
+
   justify-content: space-around;
 }
 .section2 {
@@ -20,7 +20,6 @@
   justify-content: center;
 }
 .comment-bio {
-  outline: solid;
   width: 46%;
   height: 70%;
   position: absolute;
@@ -29,16 +28,37 @@
   font-size: 1;
   text-align: justify;
 }
+
+.profileCard .profilePhoto {
+  width: 40%;
+  position: absolute;
+  height: 70%;
+  left: 7%;
+  top: 9%;
+}
+
+.profileCard .socials img {
+  width: 50px;
+  height: 50px;
+}
+
 .bios .profileCard {
   height: 50vh;
-  width: 90vh;
+  width: 90%;
   border-radius: 5%;
-  margin-left: 5%;
-  margin-right: 5%;
-  background-color: #67a1e4;
+  margin-left: 1%;
+
   box-shadow: 0px 1px 0px #1a7beb;
   position: relative;
+  margin-top: 20px;
+  background-color: cadetblue;
 }
+.bios .section3 #FA{
+  width: 100vh;
+      
+  }
+
+
 .profileCard .nametag {
   font-size: 2.5rem;
   position: absolute;
@@ -47,85 +67,19 @@
   transform: translateX(-10%);
   color: rgb(0, 0, 0);
 }
-.profileCard .profilePhoto {
-  width: 30vh;
-  position: absolute;
-  height: 35vh;
-  left: 7%;
-
-  top: 9%;
-}
 
 .profileCard .socials {
-  width: 150px;
+  width: fit-content;
   position: absolute;
-  height: 50px;
-  left: 65%;
+  height: fit-content;
+  left: 52%;
   bottom: 5%;
   display: flex;
 }
 
-.profileCard .socials img {
-  width: 50px;
-  height: 50px;
-}
-
-/* @media only screen and (min-width: 801px) and(max-width: 1024px) {
-
-  .bios .profileCard {
-    height: 50vh;
-    width: 90%;
-    border-radius: 5%;
-    margin-left: 5%;
-    box-shadow: 0px 1px 0px #1a7beb;
-    position: relative;
-    margin-top: 20px;
-    background-color: cadetblue;
-  }
-
-  .profileCard .nametag {
-    font-size: 2.5rem;
-    position: absolute;
-    bottom: 5%;
-    left: 10%;
-    transform: translateX(-10%);
-    color: rgb(0, 0, 0);
-  }
-
-  .profileCard .socials {
-    width: 150px;
-    position: absolute;
-    height: 50px;
-    left: 65%;
-    bottom: 50px;
-    display: flex;
-  }
-
-  .section1 {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-  }
-  .section2 {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-  }
-  .section3 {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .comment-bio {
-    display: none;
-  }
-}
-
 /* Phone views */
- @media only screen and  (max-width: 800px){
-
+@media only screen and (max-width: 800px) {
   .bios .profileCard {
-   
     height: 50vh;
     width: 90%;
     border-radius: 5%;
@@ -134,12 +88,6 @@
     position: relative;
     margin-top: 20px;
     background-color: rgb(14, 158, 163);
-  }
-  .profileCard .profilePhoto{ 
-    position: absolute;
-    width: 70%;
-    height: 70%;
-  
   }
 
   .profileCard .nametag {
@@ -150,14 +98,12 @@
     transform: translateX(-10%);
     width: 90%;
     color: rgb(0, 0, 0);
-    
   }
   .profileCard .socials {
-    
     width: 18%;
     height: 35%;
     position: absolute;
-    left: 82%;
+    left: 80%;
     bottom: 50%;
     display: flex;
     flex-direction: column;
@@ -174,17 +120,65 @@
     display: flex;
     flex-direction: column;
   }
+
   .comment-bio {
     display: none;
   }
 
   .profileCard .socials img {
     width: 75%;
-    height: 100%; 
-    
+    height: 100%;
+    box-shadow: 0 0 5px white; 
   }
+  .profileCard .profilePhoto {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+  }
+  .bios .section3 #FA{
+    width: 90%;
+        
+    }
 }
 
-@media only scree and () {
+@media only screen and (min-width: 801px) and(max-width: 1660px) {
+  .bios .profileCard {
+    height: 50vh;
+    width: 90%;
+    border-radius: 5%;
+    margin-left: 5%;
+    box-shadow: 0px 1px 0px #1a7beb;
+    position: relative;
+    margin-top: 20px;
+    background-color: rgb(14, 158, 163);
+  }
+  .profileCard .profilePhoto {
+    position: absolute;
+    width: 42%;
+    height: 70%;
+  }
+
+  .profileCard .nametag {
+    font-size: 2.8rem;
+    position: absolute;
+    bottom: 5%;
+    left: 15%;
+    transform: translateX(-10%);
+    width: 90%;
+    color: rgb(0, 0, 0);
+  }
+  .profileCard .socials {
+    width: 18%;
+    height: 35%;
+    position: absolute;
+    left: 52%;
+    bottom: 1%;
+  }
   
+  .bios .section1,
+  .bios .section2,
+  .bios .section3 {
+    display: flex;
+    flex-direction: column;
+  }
 }
