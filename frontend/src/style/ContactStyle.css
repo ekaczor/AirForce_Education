@@ -69,7 +69,7 @@ button:hover {
   background-color: #67b8ff;  
   box-shadow: 0 0 10px white; 
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   .contactform {
     width: 80%; 
     left: 10%; 
