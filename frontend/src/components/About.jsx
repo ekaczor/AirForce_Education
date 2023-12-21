@@ -2,12 +2,21 @@ import "../style/AboutStyle.css";
 import githubLogo from "../assets/github-logo.png";
 import linkedInLogo from "../assets/linkedin-logo.png";
 import image3 from "../assets/NeverGiveUp.png";
+import evanKpfp from "../assets/EvanKazcorpfp.jpg";
+import aronLpfp from "../assets/AronLomnerpfp.png";
+import broganRpfp from "../assets/BroganReedpfp.jpg";
+import sebApfp from "../assets/nopfp.jpg";
+import francApfp from "../assets/Francpfp.jpg";
+
 const About = () => {
   return (
-    <div className="bios" style={{zIndex:'0'}}>
+    <div className="bios" >
       <div className="section1">
         <div className="profileCard" id="AL">
-          <img src={image3} alt="" className="profilePhoto" />
+          <a href="https://www.aronlomner.com/" target="blank">
+            {" "}
+            <img src={aronLpfp} alt="" className="profilePhoto" />
+          </a>
           <div className="comment-bio">
             <p>
               {" "}
@@ -20,13 +29,17 @@ const About = () => {
 
           <div className="socials">
             <div>
-              <a href="">
-                <img src={githubLogo} alt="" />
+              <a href="https://github.com/Aron-Lomner" target="blank">
+                <img src={githubLogo} alt="Aron's Github" />
               </a>
             </div>
             <div>
-              <a href=""></a>
-              <img src={linkedInLogo} alt="" />
+              <a
+                href="https://www.linkedin.com/in/aron-lomner-032643299/"
+                target="blank"
+              >
+                <img src={linkedInLogo} alt="Aron's Linked in" />
+              </a>
             </div>
           </div>
 
@@ -34,7 +47,7 @@ const About = () => {
         </div>
 
         <div className="profileCard" id="BR">
-          <img src={image3} alt="" className="profilePhoto" />
+          <img src={broganRpfp} alt="" className="profilePhoto" />
           <div className="comment-bio">
             <p>
               {" "}
@@ -47,7 +60,9 @@ const About = () => {
 
           <div className="socials">
             <div>
-              <img src={githubLogo} alt="" />
+              <a href="https://github.com/BroganDR" target="blank">
+                <img src={githubLogo} alt="" />
+              </a>
             </div>
             <div>
               <img src={linkedInLogo} alt="" />
@@ -57,9 +72,17 @@ const About = () => {
           <p className="nametag">Brogan Reed</p>
         </div>
       </div>
+
       <div className="section2">
         <div className="profileCard" id="EK">
-          <img src={image3} alt="" className="profilePhoto" />
+          <a href="https://ekaczor.github.io/index.html" target="blank">
+            {" "}
+            <img
+              src={evanKpfp}
+              alt="Evan's portfolio'"
+              className="profilePhoto"
+            />
+          </a>
           <div className="comment-bio">
             <p>
               {" "}
@@ -71,16 +94,29 @@ const About = () => {
           </div>
           <div className="socials">
             <div>
-              <img src={githubLogo} alt="" />
+              <a
+                href="https://github.com/ekaczor?tab=repositories"
+                target="blank"
+              >
+                <img src={githubLogo} alt="Evan's github" />
+              </a>
             </div>
             <div>
-              <img src={linkedInLogo} alt="" />
+              <a href="#">
+                <img src={linkedInLogo} alt="Evans LinkedIn" />
+              </a>
             </div>
           </div>
-          <p className="nametag">Evan Kazcor</p>
+          <p className="nametag">Evan Kaczor</p>
         </div>
-        <div className="profileCard" id="FA">
-          <img src={image3} alt="" className="profilePhoto" />
+        <div className="profileCard" id="SA">
+          <a href="https://alealvarado12.github.io/" target="blank">
+            <img
+              src={sebApfp}
+              alt="Sebastian's Portaolio"
+              className="profilePhoto"
+            />
+          </a>
           <div className="comment-bio">
             <p>
               {" "}
@@ -94,11 +130,13 @@ const About = () => {
           <div className="socials">
             <div>
               <a href="https://alealvarado12.github.io" target="blank">
-                <img src={githubLogo} alt="" />
+                <img src={githubLogo} alt="Sebastian's github" />
               </a>
             </div>
             <div>
-              <img src={linkedInLogo} alt="" />
+              <a href="https://www.linkedin.com/in/sebastian-alvarado-5091a31b8/">
+                <img src={linkedInLogo} alt="Sebastian's Linkedin" />
+              </a>
             </div>
           </div>
 
@@ -107,12 +145,20 @@ const About = () => {
       </div>
       <div className="section3">
         <div className="profileCard" id="FA">
+          <a
+            href="https://franalv12.github.io/
+"target="blank"
+          >
+            <img src={francApfp} alt="Francisco's Porfolio" className="profilePhoto" />
+          </a>
           <div className="socials">
             <div>
-              <img src={githubLogo} alt="" />
+              <a
+                href="https://github.com/FranAlv12" target="blank"><img src={githubLogo} alt="Francisco's Github" />
+              </a>
             </div>
             <div>
-              <img src={linkedInLogo} alt="" />
+              <a href="https://www.linkedin.com/in/francisco-alvarado-1419522a0/" target="blank"><img src={linkedInLogo} alt="Francisco's LinkedIn" /></a>
             </div>
           </div>
           <div className="comment-bio">
@@ -124,8 +170,6 @@ const About = () => {
               Optio sit quaerat suscipit sint necessitatibus. Tempore.
             </p>
           </div>
-
-          <img src={image3} alt="" className="profilePhoto" />
 
           <p className="nametag">Francisco Alvarado</p>
         </div>
