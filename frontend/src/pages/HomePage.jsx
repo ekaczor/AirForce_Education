@@ -1,8 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
-import "../style/HomeStyle.css";
-import ToolCard from "../components/ToolCard";
 import RandomFact from "../components/RandomFact";
-
+import ToolCard from "../components/ToolCard";
+import "../style/HomeStyle.css";
 
 const HomePage = () => {
   return (
@@ -19,7 +18,7 @@ const HomePage = () => {
       </div>
 
       <div className="all-links">
-        <RandomFact/>
+        <RandomFact />
         <ToolCard
           title="See today's NASA Picture of the Day!"
           description="The Picture of the Day tool in AirForce Education delivers daily
@@ -27,6 +26,15 @@ const HomePage = () => {
                 content that sparks curiosity and encourages exploration."
           imagePath="src/assets/PictureOTD.png"
           pagePath="/apod"
+        />
+      </div>
+
+      <div className="gallery">
+        <ToolCard
+          title="See your saved images"
+          description="All of your favorites images saved in one place!"
+          imagePath="../src/assets/GalleryImage.jpg"
+          pagePath={"/saved-images"}
         />
       </div>
     </div>

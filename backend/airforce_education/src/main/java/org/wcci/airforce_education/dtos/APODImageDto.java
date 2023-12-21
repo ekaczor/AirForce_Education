@@ -1,6 +1,6 @@
 package org.wcci.airforce_education.dtos;
 
-public class APODDto {
+public class APODImageDto {
     private String copyright;
     private String date;
     private String explanation;
@@ -8,7 +8,7 @@ public class APODDto {
     private String hdurl;
     private String url;
 
-    public APODDto(String copyright, String date, String explanation, String title, String hdurl, String url){
+    public APODImageDto(String copyright, String date, String explanation, String title, String hdurl, String url){
         this.copyright=copyright;
         this.date=date;
         this.explanation= explanation;

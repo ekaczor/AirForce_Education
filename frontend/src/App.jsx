@@ -5,6 +5,10 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import Apod from "./pages/Apod";
 
+import GalleryPage from "./pages/GalleryPage";
+
+
+
 const App = () => {
   return (
     <Router>
@@ -15,6 +19,7 @@ const App = () => {
         <Route path="/AboutPage" element={<AboutPage />} />
         <Route path="/ContactPage" element={<ContactPage />} />
         <Route path="/apod" element={<Apod />}></Route>
+        <Route path="/saved-images" element={<GalleryPage />} />
       </Routes>
     </Router>
   );
