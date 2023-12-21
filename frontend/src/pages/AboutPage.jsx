@@ -1,4 +1,6 @@
 import About from "../components/About.jsx";
+import "../style/ApodStyle.css";
+
 const AboutPage = () => {
 
   return (
