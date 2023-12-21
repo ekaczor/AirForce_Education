@@ -5,4 +5,6 @@
     width: 10vw;
     min-width: fit-content;
     border-radius: 25px;
+    margin: 20px;
+    box-shadow: 0px 2px 8px 5px rgb(47, 124, 138);
 }

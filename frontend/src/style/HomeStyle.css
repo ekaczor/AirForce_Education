@@ -4,7 +4,6 @@
   align-items: center;
 }
 
-
 .tool-link {
   border: solid 1px;
   border-color: #1565c0;
@@ -26,6 +25,10 @@
   padding: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto; 
+
 }
 
 .Header {
@@ -33,16 +36,20 @@
   justify-content: center;
   text-align: center;
   font-size: 50px;
+  margin: 0 auto;
 }
 
 .paragraph {
   display: flex;
   justify-content: center;
   text-align: center;
-  /* width: 800px; */
+  width: 60vw;
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 20px;
+  margin: 0 auto;
+  font-weight: 800;
+  font-style: oblique;
 }
 
 .Picture-desc {
