@@ -74,7 +74,7 @@ const Apod = () => {
       <div className="Spinner">{loading && <LoadingSpinner />}</div>
       {!loading && (
         <>
-          <div>
+          <div className="title">
             <h1>{data.title}</h1>
             <h1>{data.date}</h1>
           </div>
@@ -83,10 +83,15 @@ const Apod = () => {
               src={data?.hdurl ? data.url : data.hdurl}
               alt={data.title}
             ></img>
-            <p>{data.explanation}</p>
-            <button onClick={saveImage}>Save Image</button>
-            <button onClick={() => handleDateChange(-1)}>Previous Day</button>
-            <button onClick={() => handleDateChange(1)}>Next Day</button>
+            <div className="buttons">
+            <button onClick={() => handleDateChange(-1)} className="button">&#8592; Previous</button>
+            <button onClick={saveImage} className="button">Save Image</button>
+            <button onClick={() => handleDateChange(1)} className="button">Next &#8594;</button>
+            </div>  
+
+            <p className="explanation">{data.explanation}</p>
+            
+            
           </div>
         </>
       )}
