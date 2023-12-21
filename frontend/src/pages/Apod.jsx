@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import ImageListPage from "./ImageListPage";
+
 import "../style/ApodStyle.css";
 
 const Apod = () => {
   let [data, setData] = useState(null);
   let [loading, setLoading] = useState(true);
-const [imageData, setImageData] =useState([]);
 
   const getTodayDate = () => {
     const today = new Date();
@@ -31,68 +30,51 @@ const [imageData, setImageData] =useState([]);
     }
   };
 
-  const getAllImages = async () => {
-    try {
-      const response = await fetch('http://localhost:8080/api/apod/getall', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to load images');
-      }
-
-      const fetchedImageData = await response.json();
-      setImageData(fetchedImageData);
-
-    } catch (error) {
-      console.error('Error loading images:', error);
-      // Handle errors as needed
-    }
-  };
-
-
   const saveImage = async () => {
     try {
-      const response = await fetch('http://localhost:8080/api/apod/saveImage', {
-        method: 'POST',
+      const response = await fetch("http://localhost:8080/api/apod/saveImage", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify( data.hdurl ), 
+        body: JSON.stringify( data.hdurl ),
       });
-  
+
       if (!response.ok) {
-        throw new Error('Failed to save image');
+        throw new Error("Failed to save image");
       }
-  
-      console.log('Image saved successfully');
+
+      console.log("Image saved successfully");
       // Handle success as needed
     } catch (error) {
-      console.error('Error saving image:', error);
+      console.error("Error saving image:", error);
     }
   };
-
-  
 
   useEffect(() => {
     getImage(getTodayDate());
   }, []);
+  
+  
   return (
     <div>
+    
       {loading && <h1>Loading ...</h1>}
       {!loading && (
-        <div>
-          <h1>{data.title}</h1>
-          <h1>{data.date}</h1>
+        <>
+          <div>
+            <h1>{data.title}</h1>
+            <h1>{data.date}</h1>
           </div>
           <div className="image">
-          <img src={data?.hdurl ? data.url : data.hdurl} alt={data.title} />
-          <p>{data.explanation}</p>
-          <button onClick={saveImage}>Save Image</button>
-        </div>
+            <img
+              src={data?.hdurl ? data.url : data.hdurl}
+              alt={data.title}
+            ></img>
+            <p>{data.explanation}</p>
+            <button onClick={saveImage}>Save Image</button>
+          </div>
+        </>
       )}
     </div>
   );

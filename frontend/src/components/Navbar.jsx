@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../style/NavStyle.css";
-import "../pages/SavedImages"
+
 // Navbar component responsible for rendering the navigation bar.
 function Navbar() {
   const navRef = useRef();
