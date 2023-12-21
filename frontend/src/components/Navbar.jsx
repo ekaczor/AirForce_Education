@@ -18,6 +18,7 @@ function Navbar() {
         <Link to="/HomePage" onClick={showNavbar}>Home Page</Link>
         <Link to="/ContactPage" onClick={showNavbar}>Contact us</Link>
         <Link to="/AboutPage" onClick={showNavbar}>About us</Link>
+        <Link to="/saved-images" onClick={showNavbar}>Gallery</Link>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
         </button>
