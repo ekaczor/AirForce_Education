@@ -1,7 +1,6 @@
 import "../style/AboutStyle.css";
 import githubLogo from "../assets/github-logo.png";
 import linkedInLogo from "../assets/linkedin-logo.png";
-
 import evanKpfp from "../assets/EvanKazcorpfp.jpg";
 import aronLpfp from "../assets/AronLomnerpfp.png";
 import broganRpfp from "../assets/BroganReedpfp.jpg";
@@ -10,7 +9,7 @@ import francApfp from "../assets/Francpfp.jpg";
 
 const About = () => {
   return (
-    <div className="bios" >
+    <div className="bios">
       <div className="section1">
         <div className="profileCard" id="AL">
           <a href="https://www.aronlomner.com/" target="blank">
@@ -144,18 +143,28 @@ const About = () => {
         <div className="profileCard" id="FA">
           <a
             href="https://franalv12.github.io/
-"target="blank"
+"
+            target="blank"
           >
-            <img src={francApfp} alt="Francisco's Porfolio" className="profilePhoto" />
+            <img
+              src={francApfp}
+              alt="Francisco's Porfolio"
+              className="profilePhoto"
+            />
           </a>
           <div className="socials">
             <div>
-              <a
-                href="https://github.com/FranAlv12" target="blank"><img src={githubLogo} alt="Francisco's Github" />
+              <a href="https://github.com/FranAlv12" target="blank">
+                <img src={githubLogo} alt="Francisco's Github" />
               </a>
             </div>
             <div>
-              <a href="https://www.linkedin.com/in/francisco-alvarado-1419522a0/" target="blank"><img src={linkedInLogo} alt="Francisco's LinkedIn" /></a>
+              <a
+                href="https://www.linkedin.com/in/francisco-alvarado-1419522a0/"
+                target="blank"
+              >
+                <img src={linkedInLogo} alt="Francisco's LinkedIn" />
+              </a>
             </div>
           </div>
           <div className="comment-bio">

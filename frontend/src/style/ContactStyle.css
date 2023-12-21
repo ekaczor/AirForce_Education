@@ -24,13 +24,24 @@ input {
 
 .comment-input {
   width: 90%;
-  height: 30vh;
-  max-width: 80%;
-
-  vertical-align: top;
-  resize: none;
+  height: 10em;
+  resize: vertical;
+  font-size: 1.5em;
   text-align: left;
-  font-size: 1.5rem;
+  vertical-align: top;
+ }
+
+
+.comment-input::placeholder {
+  color: #999; 
+}
+
+
+.comment-input:hover,
+.comment-input:focus {
+  border-color: #aaa; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  outline: none; 
 }
 
 .inputText {
@@ -43,10 +54,18 @@ input {
 label {
   font-size: 1.5rem;
 }
+
 form {
   margin-left: 2%;
 }
+
 button {
+  background-color: #084285;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
   background-color: #084285;
   color: #fff;
   font-size: 1.5rem;
@@ -56,39 +75,33 @@ button {
   margin-right: 2vw;
   cursor: pointer;
   transition: background-color 0.3s, box-shadow 0.3s;
-
   box-shadow: 0 0 0 white;
 }
 
 button:hover {
   background-color: #67b8ff;
   box-shadow: 0 0 10px white;
+  background-color: #67b8ff;
+  box-shadow: 0 0 10px white;
 }
 
+
 @media only screen and (max-width: 1200px) {
-  /* .contactform {
-    width: fit-content;
-    left: 0%;
-    padding: 10px;
+  .contactform {
+    width: 80%;
+    left: 10%;
+    padding-bottom: 10px;
     height: fit-content;
-  } */
+  }
+
   .inputText {
     width: 70vw;
-
     height: 3.8vh;
     font-size: 1.5em;
   }
+
   button {
     height: fit-content;
   }
 }
-@media only screen and (max-width: 1500px){
-  .contactform {
-    width: 100%; 
-    left: 0%; 
-    margin: 0 auto;
-    padding-bottom:10px ;
-    height: fit-content;
-    scale: 90%;
-  }
-}
+
