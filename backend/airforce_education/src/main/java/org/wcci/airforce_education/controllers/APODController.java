@@ -49,22 +49,20 @@ public class APODController {
         } catch (Exception e) {
             return Mono.error(e);
         }
-    }   
-
-    @GetMapping("/getall")
-    public ResponseEntity<List<String>> getAllImages() {
-        try {
-            List<String> imageUrls = service.getAllImages();
-            if (!imageUrls.isEmpty()) {
-                return ResponseEntity.ok(imageUrls);
-            } else {
-                return ResponseEntity.notFound().build();
-            }
-        } catch (Exception e) {
-            return ResponseEntity.status(500).body(null); 
-        }
     }
- }
-    
 
+@GetMapping("/getall")
+public ResponseEntity<List<APODImageEntity>> getAllImages() {
+    try {
+        List<APODImageEntity> imageList = service.getAllImages();
+        if (!imageList.isEmpty()) {
+            return ResponseEntity.ok(imageList);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    } catch (Exception e) {
+        return ResponseEntity.status(500).body(null);
+    }
 
+}
+}

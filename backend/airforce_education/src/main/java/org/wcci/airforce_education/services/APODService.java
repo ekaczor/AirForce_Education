@@ -54,14 +54,24 @@ public class APODService {
                 .map(savedImage -> "Image saved successfully with ID: " + savedImage.getId());
     }
 
-    public List<String> getAllImages() {
+    public List<APODImageEntity> getAllImages() {
         // Retrieve a list of APODImageEntity from the repository
         List<APODImageEntity> images = imageRepository.findAll();
     
-        // Use Java Streams to transform the list of entities to a list of image URLs
+        // Use Java Streams to transform the list of entities to a list of ImageDto
         return images.stream()
-                .map(APODImageEntity::getImageUrl) // Map each APODImageEntity to its imageUrl property
-                .collect(Collectors.toList()); // Collect the mapped URLs into a List<String>
+                .map(this::convertToImageDto)
+                .collect(Collectors.toList());
+    }
+    
+    private APODImageEntity convertToImageDto(APODImageEntity entity) {
+        APODImageEntity imageDto = new APODImageEntity();
+        imageDto.setId(entity.getId()); // Assuming getId returns the _id
+        imageDto.setImageUrl(entity.getImageUrl());
+        imageDto.setTitle(entity.getTitle());
+        // Set other properties as needed
+    
+        return imageDto;
     }
 
     public APODService(WebClient.Builder webClientBuilder) {
