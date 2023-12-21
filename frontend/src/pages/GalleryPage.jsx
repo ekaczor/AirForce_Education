@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import  { useEffect, useState } from "react";
+import LoadingSpinner from "../components/LoadingSpinner";
 import "../style/ApodStyle.css";
 
-const Gallery = () => {
+const GalleryPage = () => {
   const [savedImages, setSavedImages] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -26,7 +27,7 @@ const Gallery = () => {
 
   return (
     <div>
-      {loading && <h1>Loading...</h1>}
+      <div className="Spinner">{loading && <LoadingSpinner />}</div>
       {!loading && (
         <div className="saved image container">
           {savedImages.length === 0 ? (
@@ -36,7 +37,7 @@ const Gallery = () => {
               {savedImages.map((image) => (
                 <div key={image._id} className="card">
                   <img
-                    src={image.imageUrl.replace(/"/, '')}
+                    src={image.imageUrl.slice(1, -1)}
                     alt={image.title}
                     className="image"
                   />
@@ -52,4 +53,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default GalleryPage;

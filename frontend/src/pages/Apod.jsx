@@ -38,9 +38,10 @@ const Apod = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify( data.hdurl ),
+        body: JSON.stringify( data?.hdurl ? data.url : data.hdurl ),
+        
       });
-
+      console.log(data?.hdurl ? data.url : data.hdurl)
       if (!response.ok) {
         throw new Error("Failed to save image");
       }
