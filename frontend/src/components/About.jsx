@@ -1,7 +1,6 @@
 import "../style/AboutStyle.css";
 import githubLogo from "../assets/github-logo.png";
 import linkedInLogo from "../assets/linkedin-logo.png";
-
 import evanKpfp from "../assets/EvanKazcorpfp.jpg";
 import aronLpfp from "../assets/AronLomnerpfp.png";
 import broganRpfp from "../assets/BroganReedpfp.jpg";
@@ -15,7 +14,7 @@ const About = () => {
   };
 
   return (
-    <div className="bios">
+        <div className="bios">
       <div className="section1">
         <div className="profileCard" id="AL">
           <a
@@ -189,6 +188,11 @@ const About = () => {
             target="blank"
             onClick={playCoinSound}
           >
+            <img
+              src={francApfp}
+              alt="Francisco's Porfolio"
+              className="profilePhoto"
+            />
             <img
               src={francApfp}
               alt="Francisco's Porfolio"
