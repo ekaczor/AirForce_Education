@@ -26,7 +26,7 @@ body {
 }
 
 .image img {
-  width: 95vw;
+  width: 80vw;
   height: auto;
   align-items: center;
   justify-content: center;
@@ -87,7 +87,9 @@ body {
 @media only screen and (max-width: 1200px) {
   .explanation {font-size: 14px; width: 95%;}
   .title h1 {font-size: 25px;}
-  
+  .img img{
+    width: 95vw;
+  }
   } 
 
 
