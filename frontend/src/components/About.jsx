@@ -8,11 +8,20 @@ import sebApfp from "../assets/nopfp.jpg";
 import francApfp from "../assets/Francpfp.jpg";
 
 const About = () => {
+  const playCoinSound = () => {
+    const audio = new Audio("src/assets/sounds/Coin.mp3");
+    audio.play();
+  };
+
   return (
-    <div className="bios">
+        <div className="bios">
       <div className="section1">
         <div className="profileCard" id="AL">
-          <a href="https://www.aronlomner.com/" target="blank">
+          <a
+            href="https://www.aronlomner.com/"
+            target="blank"
+            onClick={playCoinSound}
+          >
             {" "}
             <img src={aronLpfp} alt="" className="profilePhoto" />
           </a>
@@ -28,7 +37,11 @@ const About = () => {
 
           <div className="socials">
             <div>
-              <a href="https://github.com/Aron-Lomner" target="blank">
+              <a
+                href="https://github.com/Aron-Lomner"
+                target="blank"
+                onClick={playCoinSound}
+              >
                 <img src={githubLogo} alt="Aron's Github" />
               </a>
             </div>
@@ -36,6 +49,7 @@ const About = () => {
               <a
                 href="https://www.linkedin.com/in/aron-lomner-032643299/"
                 target="blank"
+                onClick={playCoinSound}
               >
                 <img src={linkedInLogo} alt="Aron's Linked in" />
               </a>
@@ -59,7 +73,11 @@ const About = () => {
 
           <div className="socials">
             <div>
-              <a href="https://github.com/BroganDR" target="blank">
+              <a
+                href="https://github.com/BroganDR"
+                target="blank"
+                onClick={playCoinSound}
+              >
                 <img src={githubLogo} alt="" />
               </a>
             </div>
@@ -74,7 +92,11 @@ const About = () => {
 
       <div className="section2">
         <div className="profileCard" id="EK">
-          <a href="https://ekaczor.github.io/index.html" target="blank">
+          <a
+            href="https://ekaczor.github.io/index.html"
+            target="blank"
+            onClick={playCoinSound}
+          >
             {" "}
             <img
               src={evanKpfp}
@@ -85,7 +107,11 @@ const About = () => {
           <div className="comment-bio">
             <p>
               {" "}
-              Recent We Can Code IT grad (Jan/24) with skills from Production Coordinator—great at communication, teamwork, and time management. Ready to apply Full-Stack Java expertise in Columbus, Ohio, for a team valuing collaboration, communication, and top-notch customer support. Eager software engineer seeking the right opportunity.
+              Recent We Can Code IT grad (Jan/24) with skills from Production
+              Coordinator—great at communication, teamwork, and time management.
+              Ready to apply Full-Stack Java expertise in Columbus, Ohio, for a
+              team valuing collaboration, communication, and top-notch customer
+              support. Eager software engineer seeking the right opportunity.
             </p>
           </div>
           <div className="socials">
@@ -93,12 +119,16 @@ const About = () => {
               <a
                 href="https://github.com/ekaczor"
                 target="blank"
+                onClick={playCoinSound}
               >
                 <img src={githubLogo} alt="Evan's github" />
               </a>
             </div>
             <div>
-              <a href="https://www.linkedin.com/in/evan-kaczor-777585293/">
+              <a
+                href="https://www.linkedin.com/in/evan-kaczor-777585293/"
+                onClick={playCoinSound}
+              >
                 <img src={linkedInLogo} alt="Evans LinkedIn" />
               </a>
             </div>
@@ -106,10 +136,14 @@ const About = () => {
           <p className="nametag">Evan Kaczor</p>
         </div>
         <div className="profileCard" id="SA">
-          <a href="https://alealvarado12.github.io/" target="blank">
+          <a
+            href="https://alealvarado12.github.io/"
+            target="blank"
+            onClick={playCoinSound}
+          >
             <img
               src={sebApfp}
-              alt="Sebastian's Portaolio"
+              alt="Sebastian's Portfolio"
               className="profilePhoto"
             />
           </a>
@@ -125,12 +159,19 @@ const About = () => {
 
           <div className="socials">
             <div>
-              <a href="https://alealvarado12.github.io" target="blank">
+              <a
+                href="https://alealvarado12.github.io"
+                target="blank"
+                onClick={playCoinSound}
+              >
                 <img src={githubLogo} alt="Sebastian's github" />
               </a>
             </div>
             <div>
-              <a href="https://www.linkedin.com/in/sebastian-alvarado-5091a31b8/">
+              <a
+                href="https://www.linkedin.com/in/sebastian-alvarado-5091a31b8/"
+                onClick={playCoinSound}
+              >
                 <img src={linkedInLogo} alt="Sebastian's Linkedin" />
               </a>
             </div>
@@ -145,7 +186,13 @@ const About = () => {
             href="https://franalv12.github.io/
 "
             target="blank"
+            onClick={playCoinSound}
           >
+            <img
+              src={francApfp}
+              alt="Francisco's Porfolio"
+              className="profilePhoto"
+            />
             <img
               src={francApfp}
               alt="Francisco's Porfolio"
@@ -154,7 +201,11 @@ const About = () => {
           </a>
           <div className="socials">
             <div>
-              <a href="https://github.com/FranAlv12" target="blank">
+              <a
+                href="https://github.com/FranAlv12"
+                target="blank"
+                onClick={playCoinSound}
+              >
                 <img src={githubLogo} alt="Francisco's Github" />
               </a>
             </div>
@@ -163,7 +214,11 @@ const About = () => {
                 href="https://www.linkedin.com/in/francisco-alvarado-1419522a0/"
                 target="blank"
               >
-                <img src={linkedInLogo} alt="Francisco's LinkedIn" />
+                <img
+                  src={linkedInLogo}
+                  alt="Francisco's LinkedIn"
+                  onClick={playCoinSound}
+                />
               </a>
             </div>
           </div>

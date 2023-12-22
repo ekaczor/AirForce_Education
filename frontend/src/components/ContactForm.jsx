@@ -1,5 +1,15 @@
 import "../style/ContactStyle.css";
 const ContactForm = () => {
+  const playBoopSound = () => {
+    const audio = new Audio("src/assets/sounds/Boop.mp3");
+    audio.play();
+  };
+
+  const playSuccessSound = () => {
+    const audio = new Audio("src/assets/sounds/Success.mp3");
+    audio.play();
+  };
+
   return (
     <div className="contactform">
       <h1>Give us some feedback! </h1>
@@ -47,18 +57,16 @@ const ContactForm = () => {
           placeholder="Let us know what you think about our Website!!"
         />
         <br />
-        
-          <button id="submitBtn" type="submit">
-            Send
-          </button>
-          <button id="resetBtn" type="reset" >
-            Clear
-          </button>
- 
+
+        <button id="submitBtn" type="submit" onClick={playSuccessSound}>
+          Send
+        </button>
+        <button id="resetBtn" type="reset" onClick={playBoopSound}>
+          Clear
+        </button>
       </form>
       <script src="https://web3forms.com/client/script.js" async defer></script>
     </div>
   );
 };
 export default ContactForm;
-
