@@ -8,6 +8,21 @@ const Apod = () => {
   let [loading, setLoading] = useState(true);
   let [currentDate, setCurrentDate] = useState(new Date());
 
+  const openPopup = () => {
+    let popup = document.getElementById("popup");
+    if (popup) {
+      popup.classList.add("open-popup");
+    }
+  };
+
+  const closePopup = () => {
+    let popup = document.getElementById("popup");
+    if (popup) {
+      popup.classList.remove("open-popup");
+    }
+  };
+
+
   const handleDateChange = (days) => {
     const newDate = new Date(currentDate);
     newDate.setDate(currentDate.getDate() + days);
@@ -51,6 +66,7 @@ const Apod = () => {
     }
   };
 
+
   const saveImage = async () => {
     try {
       const response = await fetch("http://localhost:8080/api/apod/saveImage", {
@@ -70,12 +86,14 @@ const Apod = () => {
 
       console.log("Image saved successfully");
       // Handle success as needed
+      openPopup();
     } catch (error) {
       console.error("Error saving image:", error);
     }
   };
 
   useEffect(() => {
+
     getImage(getFormattedDate(new Date()));
   }, []);
 
@@ -124,9 +142,17 @@ const Apod = () => {
                 Next &#8594;
               </button>
             </div>
+            
+            </div>  
+            <div className="popup" id="popup">
+            <img src="../src/assets/greentick.png" alt="Green tick" />
+            <h2>Thank you!</h2>
+            <p>Your image has been successfully saved!</p>
+            <button type="button" onClick={closePopup}>Ok</button>
+            </div>
 
             <p className="explanation">{data.explanation}</p>
-          </div>
+          {/* </div> */}
         </>
       )}
     </div>

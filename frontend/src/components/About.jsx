@@ -1,11 +1,11 @@
-import "../style/AboutStyle.css";
-import githubLogo from "../assets/github-logo.png";
-import linkedInLogo from "../assets/linkedin-logo.png";
-import evanKpfp from "../assets/EvanKazcorpfp.jpg";
 import aronLpfp from "../assets/AronLomnerpfp.png";
 import broganRpfp from "../assets/BroganReedpfp.jpg";
-import sebApfp from "../assets/nopfp.jpg";
+import evanKpfp from "../assets/EvanKazcorpfp.jpg";
 import francApfp from "../assets/Francpfp.jpg";
+import githubLogo from "../assets/github-logo.png";
+import linkedInLogo from "../assets/linkedin-logo.png";
+import sebApfp from "../assets/nopfp.jpg";
+import "../style/AboutStyle.css";
 
 const About = () => {
   const playCoinSound = () => {
@@ -14,7 +14,7 @@ const About = () => {
   };
 
   return (
-        <div className="bios">
+    <div className="bios">
       <div className="section1">
         <div className="profileCard" id="AL">
           <a
@@ -28,10 +28,11 @@ const About = () => {
           <div className="comment-bio">
             <p>
               {" "}
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Molestias laboriosam unde in laborum? Consequuntur rem veniam
-              architecto vitae. Voluptatum, earum! Quas, perspiciatis corrupti?
-              Optio sit quaerat suscipit sint necessitatibus. Tempore.
+              Passionate self-taught programmer with a HSE Diploma, specializing
+              in Python, Lua, Godot, GDScript, Flutter, Dart, and networking.
+              Currently enrolled in the WeCanCodeIt Bootcamp, mastering Java,
+              Spring Boot, JavaScript, HTML, CSS, and React, aiming for a Web
+              Developer role upon graduation in January 2024.
             </p>
           </div>
 
@@ -64,10 +65,12 @@ const About = () => {
           <div className="comment-bio">
             <p>
               {" "}
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Molestias laboriosam unde in laborum? Consequuntur rem veniam
-              architecto vitae. Voluptatum, earum! Quas, perspiciatis corrupti?
-              Optio sit quaerat suscipit sint necessitatibus. Tempore.
+              Brogan is a passionate participant in the WeCanCode IT programming
+              bootcamp, where they are honing their skills and knowledge in the
+              world of coding. With a relentless drive to excel in the tech
+              industry, Brogan is dedicated to mastering the intricacies of
+              programming and contributing innovative solutions to the
+              ever-evolving field.
             </p>
           </div>
 
@@ -150,10 +153,10 @@ const About = () => {
           <div className="comment-bio">
             <p>
               {" "}
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Molestias laboriosam unde in laborum? Consequuntur rem veniam
-              architecto vitae. Voluptatum, earum! Quas, perspiciatis corrupti?
-              Optio sit quaerat suscipit sint necessitatibus. Tempore.
+              Passionate about coding, i'm making a career shift and currently
+              enrolled in a coding bootcamp. Exploring the intricacies of
+              programming feels like unlocking a new world. Excited to embrace
+              this journey into the tech realm!
             </p>
           </div>
 
@@ -225,10 +228,11 @@ const About = () => {
           <div className="comment-bio">
             <p>
               {" "}
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Molestias laboriosam unde in laborum? Consequuntur rem veniam
-              architecto vitae. Voluptatum, earum! Quas, perspiciatis corrupti?
-              Optio sit quaerat suscipit sint necessitatibus. Tempore.
+              A bilingual young member of the Army National Guard. Becoming a
+              Full Stack Java Developer has become my goal. The goal is to
+              develop everyday skills and work as a member of a team. Eager to
+              join a growth-oriented community that seeks to innovate and move
+              forward.
             </p>
           </div>
 

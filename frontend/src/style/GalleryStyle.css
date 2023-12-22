@@ -8,6 +8,7 @@
 .image-card-gallery {
     display: flex;
     flex-direction: column;
+    margin: 5px;
     align-items: center;
     justify-content: center;
 }
