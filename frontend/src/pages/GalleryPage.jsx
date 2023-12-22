@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import LoadingSpinner from "../components/LoadingSpinner";
 import ImageCard from "../components/ImageCard";
-import "../style/ApodStyle.css";
+import "../style/GalleryStyle.css";
 
 const GalleryPage = () => {
   const [savedImages, setSavedImages] = useState([]);
@@ -35,6 +35,35 @@ const GalleryPage = () => {
       console.log("Error: ", error);
     }
   };
+  const review = async (img, newRating) => {
+    console.log(img, newRating);
+    try {
+      const response = await fetch(
+        "http://localhost:8080/api/apod/updateImage",
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            id: img.id,
+            imageUrl: img.imageUrl,
+            title: img.title,
+            rating: newRating,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      await fetchSavedImages();
+    } catch (error) {
+      console.log("Error updating image:", error);
+    }
+  };
+
   useEffect(() => {
     fetchSavedImages();
   }, []);
@@ -44,33 +73,23 @@ const GalleryPage = () => {
     setLoading(false);
   }, [savedImages]);
 
-  {
-    /* <div key={image._id} className="card">
-<img
-src={image.imageUrl.slice(1, -1)}
-alt={image.title}
-className="image"
-/>
-
-<p>{image.title}</p>
-</div> */
-  }
   return (
     <div>
       <div className="Spinner">{loading && <LoadingSpinner />}</div>
       {!loading && (
-        <div className="saved image container">
+        <div>
           {savedImages.length === 0 ? (
             <p>No saved images found.</p>
           ) : (
-            <div>
+            <div className="gallery">
               {savedImages.map((image, index) => (
                 <ImageCard
                   key={index}
-                  id={image.id}
-                  imageUrl={image.imageUrl}
-                  title={image.title}
+                  image={image}
                   deleteImg={deleteImg}
+                  onReview={(img, newRating) => {
+                    review(img, newRating);
+                  }}
                 />
               ))}
             </div>
