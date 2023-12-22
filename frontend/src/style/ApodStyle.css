@@ -26,12 +26,14 @@ body {
 }
 
 .image img {
-  width: 95vw;
+  width: 80vw;
   height: auto;
   align-items: center;
   justify-content: center;
   margin: auto;
   max-width: 100%;
+  /* max-height: 100vh; */
+  /* object-fit: cover; */
   display: flex;
   border: 5px solid #01579b;
   border-radius: 2%;
@@ -138,7 +140,9 @@ margin-top: 50px ;
 @media only screen and (max-width: 1200px) {
   .explanation {font-size: 14px; width: 95%;}
   .title h1 {font-size: 25px;}
-  
+  .img img{
+    width: 95vw;
+  }
   } 
 
 

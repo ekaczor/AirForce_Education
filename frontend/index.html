@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/plane-icon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="/frontend/src/index.css">
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"> -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
-      rel="stylesheet"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AirForce Education</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/src/assets/plane-icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/frontend/src/index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    
+    @keyframes moveImage {
+      0% { left: 0%; top: 100%; opacity: 0;}
+      1% { left: 0%; top: 100%; opacity: 1;}
+      50% { left: 85%; top: 50%; opacity: 1; transform: scaleX(-1);}
+      99% { left: 4%; top: 2%; opacity: 1;}
+      100% {display: none;}
+    }
+
+    #movingImage {
+      position: absolute;
+      animation: moveImage 2.5s forwards; 
+    }
+  </style>
+  <title>AirForce Education</title>
+</head>
+<body>
+  <div id="root"></div>
+  <img id="movingImage" src="/src/assets/Airplane.png" alt="Moving Image">
+  <script type="module" src="/src/main.jsx"></script>
+</body>
 </html>

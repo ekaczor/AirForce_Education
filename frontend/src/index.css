@@ -1,7 +1,7 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap%22"); */
-body {
-    position: relative;
-    /* font-family: ; */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap');
+
+*{
+    font-family: 'Fredoka', sans-serif;
 }
 
 body::before {
@@ -15,3 +15,8 @@ body::before {
     z-index: -1;
     opacity: 0.5; 
 }
+
+#movingImage {
+    max-width: 100px;
+}
+

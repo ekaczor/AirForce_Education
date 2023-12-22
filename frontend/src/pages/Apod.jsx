@@ -40,6 +40,16 @@ const Apod = () => {
     return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
   };
 
+  const playSaveSound = () => {
+    const audio = new Audio("src/assets/sounds/Save.mp3");
+    audio.play();
+  };
+
+  const playButtonSound = () => {
+    const audio = new Audio("src/assets/sounds/Pop.mp3");
+    audio.play();
+  };
+
   const getImage = async (date) => {
     try {
       const response = await fetch(`http://localhost:8080/api/apod/${date}`);
@@ -102,9 +112,37 @@ const Apod = () => {
               alt={data.title}
             ></img>
             <div className="buttons">
-            <button onClick={() => handleDateChange(-1)} className="button">&#8592; Previous</button>
-            <button onClick={saveImage} className="button">Save Image</button>
-            <button onClick={() => handleDateChange(1)} className="button">Next &#8594;</button>
+              {/* <SoundButton path="src/assets/sounds/Save.mp3" /> */}
+
+              <button
+                onClick={() => {
+                  handleDateChange(-1);
+                  playButtonSound();
+                }}
+                className="button"
+              >
+                &#8592; Previous
+              </button>
+              <button
+                onClick={() => {
+                  saveImage();
+                  playSaveSound();
+                }}
+                className="button"
+              >
+                Save Image
+              </button>
+              <button
+                onClick={() => {
+                  handleDateChange(1);
+                  playButtonSound();
+                }}
+                className="button"
+              >
+                Next &#8594;
+              </button>
+            </div>
+            
             </div>  
             <div className="popup" id="popup">
             <img src="../src/assets/greentick.png" alt="Green tick" />
@@ -114,9 +152,7 @@ const Apod = () => {
             </div>
 
             <p className="explanation">{data.explanation}</p>
-            
-            
-          </div>
+          {/* </div> */}
         </>
       )}
     </div>
