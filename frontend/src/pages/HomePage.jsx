@@ -4,6 +4,11 @@ import ToolCard from "../components/ToolCard";
 import "../style/HomeStyle.css";
 
 const HomePage = () => {
+  const playBellSound = () => {
+    const audio = new Audio("src/assets/sounds/BicycleBell.mp3");
+    audio.play();
+  };
+
   return (
     <div className="Home-container">
       <div>
@@ -26,6 +31,7 @@ const HomePage = () => {
                 content that sparks curiosity and encourages exploration."
           imagePath="src/assets/PictureOTD.png"
           pagePath="/apod"
+          onClick={playBellSound}
         />
       </div>
 
@@ -35,6 +41,7 @@ const HomePage = () => {
           description="All of your favorites images saved in one place!"
           imagePath="../src/assets/GalleryImage.jpg"
           pagePath={"/saved-images"}
+          onClick={playBellSound}
         />
       </div>
     </div>
