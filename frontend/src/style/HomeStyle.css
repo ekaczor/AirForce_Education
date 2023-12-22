@@ -38,6 +38,9 @@
   text-align: center;
   font-size: 50px;
   margin: 0 auto;
+  color: #1565c0;
+  text-shadow: 2px 2px 2px white;
+  padding: 20px;
 }
 
 .paragraph {
@@ -52,6 +55,8 @@
   font-weight: 800;
   font-style: oblique;
   max-height: 500px;
+  color: #1565c0;
+  text-shadow: 2px 2px 2px white;
 }
 
 .Picture-desc {
