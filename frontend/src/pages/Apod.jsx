@@ -25,6 +25,16 @@ const Apod = () => {
     return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
   };
 
+  const playSaveSound = () => {
+    const audio = new Audio("src/assets/sounds/Save.mp3");
+    audio.play();
+  };
+
+  const playButtonSound = () => {
+    const audio = new Audio("src/assets/sounds/Pop.mp3");
+    audio.play();
+  };
+
   const getImage = async (date) => {
     try {
       const response = await fetch(`http://localhost:8080/api/apod/${date}`);
@@ -74,7 +84,7 @@ const Apod = () => {
       <div className="Spinner">{loading && <LoadingSpinner />}</div>
       {!loading && (
         <>
-          <div>
+          <div className="title">
             <h1>{data.title}</h1>
             <h1>{data.date}</h1>
           </div>
@@ -83,10 +93,39 @@ const Apod = () => {
               src={data?.hdurl ? data.url : data.hdurl}
               alt={data.title}
             ></img>
-            <p>{data.explanation}</p>
-            <button onClick={saveImage}>Save Image</button>
-            <button onClick={() => handleDateChange(-1)}>Previous Day</button>
-            <button onClick={() => handleDateChange(1)}>Next Day</button>
+            <div className="buttons">
+              {/* <SoundButton path="src/assets/sounds/Save.mp3" /> */}
+
+              <button
+                onClick={() => {
+                  handleDateChange(-1);
+                  playButtonSound();
+                }}
+                className="button"
+              >
+                &#8592; Previous
+              </button>
+              <button
+                onClick={() => {
+                  saveImage();
+                  playSaveSound();
+                }}
+                className="button"
+              >
+                Save Image
+              </button>
+              <button
+                onClick={() => {
+                  handleDateChange(1);
+                  playButtonSound();
+                }}
+                className="button"
+              >
+                Next &#8594;
+              </button>
+            </div>
+
+            <p className="explanation">{data.explanation}</p>
           </div>
         </>
       )}

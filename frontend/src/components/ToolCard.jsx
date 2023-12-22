@@ -2,10 +2,10 @@
 import { Link } from "react-router-dom";
 import "../style/HomeStyle.css";
 
-const ToolCard = ({ title, imagePath, description, pagePath }) => {
+const ToolCard = ({ title, imagePath, description, pagePath, onClick }) => {
   return (
     <div className="tool-link">
-      <Link to={pagePath} className="Link-body">
+      <Link to={pagePath} className="Link-body" onClick={onClick}>
         <div className="tool-card">
           <h2 className="Card-title">{title}</h2>
           <img

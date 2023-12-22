@@ -21,6 +21,11 @@ const GalleryPage = () => {
     }
   };
 
+  const playBoopSound = () => {
+    const audio = new Audio("src/assets/sounds/Boop.mp3");
+    audio.play();
+  };
+
   const deleteImg = (id) => {
     try {
       fetch(`http://localhost:8080/api/apod/deleteImage/${id}`, {
@@ -90,6 +95,7 @@ const GalleryPage = () => {
                   onReview={(img, newRating) => {
                     review(img, newRating);
                   }}
+                  playBoopSound={playBoopSound}
                 />
               ))}
             </div>

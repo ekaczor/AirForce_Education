@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
-const ImageCard = ({ image, onReview, deleteImg }) => {
+const ImageCard = ({ image, onReview, deleteImg, playBoopSound }) => {
   return (
-    <div className={"image-card "}>
-      <h1 className="image-title">{image.title}</h1>
-      <img src={image.imageUrl} alt={image.title} className={"image "} />
-      <div className="review-container">
+    <div className={"image-card-gallery"}>
+      <h1 className="image-title-gallery">{image.title}</h1>
+      <img src={image.imageUrl} alt={image.title} className={"image-gallery"} />
+      <div className="review-container-gallery">
         {[1, 2, 3, 4, 5].map((star) => {
           return <span
             key={star}
@@ -20,6 +20,7 @@ const ImageCard = ({ image, onReview, deleteImg }) => {
       <button
         onClick={() => {
           deleteImg(image.id);
+          playBoopSound();
         }}
       >
         Delete
